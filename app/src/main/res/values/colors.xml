@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors -->
+    <color name="colorPrimary">#1976D2</color>
+    <color name="colorPrimaryDark">#1565C0</color>
+    <color name="colorPrimaryLight">#42A5F5</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Secondary colors -->
+    <color name="colorSecondary">#FFA000</color>
+    <color name="colorSecondaryDark">#FF6F00</color>
+    <color name="colorSecondaryLight">#FFB74D</color>
+
+    <!-- Status colors -->
+    <color name="colorSuccess">#4CAF50</color>
+    <color name="colorError">#F44336</color>
+    <color name="colorWarning">#FF9800</color>
+    <color name="colorInfo">#2196F3</color>
+
+    <!-- Chart colors -->
+    <color name="chartLine1">#2196F3</color>
+    <color name="chartLine2">#4CAF50</color>
+    <color name="chartLine3">#FFA000</color>
+    <color name="chartGrid">#E0E0E0</color>
+
+    <!-- Text colors -->
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+    <color name="textDisabled">#9E9E9E</color>
+    <color name="textOnPrimary">#FFFFFF</color>
+    <color name="textOnSecondary">#000000</color>
+
+    <!-- Background colors -->
+    <color name="backgroundPrimary">#FFFFFF</color>
+    <color name="backgroundSecondary">#F5F5F5</color>
+    <color name="backgroundElevated">#FFFFFF</color>
+    <color name="divider">#EEEEEE</color>
+
+    <!-- Gauge colors -->
+    <color name="gaugeNormal">#4CAF50</color>
+    <color name="gaugeWarning">#FFA000</color>
+    <color name="gaugeDanger">#F44336</color>
+    <color name="gaugeBackground">#E0E0E0</color>
+</resources>
