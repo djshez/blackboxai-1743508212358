@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom Toolbar Styles -->
+    <style name="Widget.App.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:elevation">@dimen/toolbar_elevation</item>
+        <item name="titleTextAppearance">@style/TextAppearance.App.Toolbar.Title</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.App.Toolbar.Subtitle</item>
+    </style>
+
+    <style name="TextAppearance.App.Toolbar.Title" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="TextAppearance.App.Toolbar.Subtitle" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <!-- Dashboard Metric Card Style -->
+    <style name="Widget.App.MetricCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="android:layout_margin">@dimen/card_margin_horizontal</item>
+        <item name="android:layout_height">@dimen/dashboard_metric_card_height</item>
+    </style>
+
+    <!-- Chart Styles -->
+    <style name="Widget.App.Chart">
+        <item name="android:layout_height">@dimen/dashboard_chart_height</item>
+        <item name="android:padding">@dimen/spacing_medium</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="Widget.App.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:paddingStart">@dimen/button_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/button_padding_horizontal</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+    </style>
+
+    <style name="Widget.App.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:paddingStart">@dimen/button_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/button_padding_horizontal</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <!-- List Item Styles -->
+    <style name="Widget.App.ListItem">
+        <item name="android:minHeight">@dimen/list_item_height</item>
+        <item name="android:padding">@dimen/list_item_padding</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <!-- Progress Indicator Styles -->
+    <style name="Widget.App.LinearProgress" parent="Widget.MaterialComponents.LinearProgressIndicator">
+        <item name="android:layout_height">@dimen/progress_bar_height</item>
+        <item name="trackCornerRadius">@dimen/progress_bar_height</item>
+    </style>
+
+    <style name="Widget.App.CircularProgress" parent="Widget.MaterialComponents.CircularProgressIndicator">
+        <item name="android:layout_width">@dimen/progress_circular_size</item>
+        <item name="android:layout_height">@dimen/progress_circular_size</item>
+        <item name="indicatorSize">@dimen/progress_circular_size</item>
+    </style>
+
+    <!-- Dialog Styles -->
+    <style name="Widget.App.DialogTitle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textAppearance">@style/TextAppearance.App.Headline6</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Widget.App.DialogMessage" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textAppearance">@style/TextAppearance.App.Body1</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <!-- Bottom Navigation Styles -->
+    <style name="Widget.App.BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="itemIconTint">@color/colorPrimary</item>
+        <item name="itemTextColor">@color/colorPrimary</item>
+        <item name="elevation">@dimen/card_elevation</item>
+    </style>
+
+    <!-- FAB Styles -->
+    <style name="Widget.App.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="android:layout_margin">@dimen/fab_margin</item>
+        <item name="elevation">@dimen/fab_elevation</item>
+        <item name="backgroundTint">?attr/colorSecondary</item>
+        <item name="tint">?attr/colorOnSecondary</item>
+    </style>
+
+    <!-- Switch Styles -->
+    <style name="Widget.App.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="android:minHeight">@dimen/settings_item_height</item>
+        <item name="android:padding">@dimen/spacing_medium</item>
+    </style>
+
+    <!-- Slider Styles -->
+    <style name="Widget.App.Slider" parent="Widget.MaterialComponents.Slider">
+        <item name="android:padding">@dimen/spacing_medium</item>
+        <item name="tickVisible">true</item>
+        <item name="labelBehavior">floating</item>
+    </style>
+
+    <!-- Radio Button Styles -->
+    <style name="Widget.App.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="android:minHeight">@dimen/settings_item_height</item>
+        <item name="android:padding">@dimen/spacing_medium</item>
+    </style>
+</resources>
