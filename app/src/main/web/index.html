@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaycie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background: url('path/to/dna-animation.gif') no-repeat center center fixed; /* Animated DNA strand background */
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace; /* Monospace font for a retro feel */
+        }
+        .header {
+            background-color: rgba(255, 204, 0, 0.8); /* Bright yellow with transparency */
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4">
+        <div class="header">
+            <h1 class="text-3xl font-bold">Jaycie - Created by Marty Montgomery</h1>
+        </div>
+        
+        <div class="mb-4">
+            <h2 class="text-2xl font-semibold mb-2">Describe Your Project</h2>
+            <textarea id="projectDescription" class="w-full p-2 border border-gray-300 rounded" rows="4" placeholder="Describe what you want to create..."></textarea>
+            <button id="generateCodeButton" class="mt-2 bg-blue-500 text-white p-2 rounded">Generate Code</button>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-semibold mb-2">Manage Projects</h2>
+            <button id="manageProjectsButton" class="bg-green-500 text-white p-2 rounded">Manage Projects</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('generateCodeButton').addEventListener('click', function() {
+            const description = document.getElementById('projectDescription').value;
+            // Placeholder for AI suggestions logic
+            alert('Generating code for: ' + description);
+        });
+
+        document.getElementById('manageProjectsButton').addEventListener('click', function() {
+            alert('Navigating to Manage Projects...');
+        });
+    </script>
+</body>
+</html>
