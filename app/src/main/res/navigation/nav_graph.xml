@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.ht2000obd.fragments.DashboardFragment"
+        android:label="Dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_advanced"
+            app:destination="@id/advancedDashboardFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/advancedDashboardFragment"
+        android:name="com.example.ht2000obd.fragments.AdvancedDashboardFragment"
+        android:label="Advanced Diagnostics" />
+
+    <fragment
+        android:id="@+id/codeScanFragment"
+        android:name="com.example.ht2000obd.fragments.CodeScanFragment"
+        android:label="Code Scanner">
+        <action
+            android:id="@+id/action_codeScan_to_advanced"
+            app:destination="@id/advancedDashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.ht2000obd.fragments.HistoryFragment"
+        android:label="History">
+        <action
+            android:id="@+id/action_history_to_advanced"
+            app:destination="@id/advancedDashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.ht2000obd.fragments.SettingsFragment"
+        android:label="Settings" />
+
+</navigation>
