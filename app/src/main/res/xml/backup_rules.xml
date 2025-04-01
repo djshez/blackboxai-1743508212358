@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- App preferences -->
+    <include domain="sharedpref" path="obd_preferences.xml"/>
+    
+    <!-- Database -->
+    <include domain="database" path="obd_database"/>
+    
+    <!-- Internal storage -->
+    <include domain="file" path="exports/"/>
+    <include domain="file" path="logs/"/>
+    
+    <!-- Exclude cache and temporary files -->
+    <exclude domain="file" path="temp/"/>
+    <exclude domain="file" path="cache/"/>
+    <exclude domain="external" path="temp/"/>
+    <exclude domain="external" path="cache/"/>
+    
+    <!-- Exclude sensitive information -->
+    <exclude domain="sharedpref" path="device_tokens.xml"/>
+    <exclude domain="database" path="temp_data"/>
+</full-backup-content>
