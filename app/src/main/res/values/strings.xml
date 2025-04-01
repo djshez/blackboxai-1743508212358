@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">HT2000 OBD Scanner</string>
+
+    <!-- Navigation Labels -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_scan">Code Scanner</string>
+    <string name="nav_history">History</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_rpm">RPM</string>
+    <string name="dashboard_speed">Speed</string>
+    <string name="dashboard_coolant_temp">Coolant Temp</string>
+    <string name="dashboard_fuel_level">Fuel Level</string>
+    <string name="dashboard_throttle">Throttle</string>
+    <string name="dashboard_connect">Connect Device</string>
+    <string name="dashboard_disconnect">Disconnect</string>
+    <string name="dashboard_no_device">No device connected</string>
+    <string name="dashboard_connecting">Connecting…</string>
+    <string name="dashboard_connected">Connected to %s</string>
+
+    <!-- Code Scanner Screen -->
+    <string name="scan_title">Trouble Code Scanner</string>
+    <string name="scan_start">Start Scan</string>
+    <string name="scan_stop">Stop Scan</string>
+    <string name="scan_clear">Clear Codes</string>
+    <string name="scan_no_codes">No trouble codes found</string>
+    <string name="scan_scanning">Scanning for trouble codes…</string>
+    <string name="scan_codes_found">Found %d trouble codes</string>
+    <string name="scan_clear_confirm">Clear all trouble codes?</string>
+    <string name="scan_cleared">Trouble codes cleared</string>
+
+    <!-- History Screen -->
+    <string name="history_title">Scan History</string>
+    <string name="history_empty">No history entries</string>
+    <string name="history_delete">Delete</string>
+    <string name="history_delete_all">Delete All</string>
+    <string name="history_delete_confirm">Delete this entry?</string>
+    <string name="history_delete_all_confirm">Delete all history?</string>
+    <string name="history_export">Export</string>
+    <string name="history_export_csv">Export as CSV</string>
+    <string name="history_export_json">Export as JSON</string>
+    <string name="history_import">Import</string>
+    <string name="history_filter">Filter</string>
+    <string name="history_filter_date">Filter by Date</string>
+    <string name="history_filter_code">Filter by Code</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_theme_system">System Default</string>
+    <string name="settings_units">Units</string>
+    <string name="settings_units_metric">Metric (km/h, °C)</string>
+    <string name="settings_units_imperial">Imperial (mph, °F)</string>
+    <string name="settings_bluetooth">Bluetooth Settings</string>
+    <string name="settings_auto_connect">Auto-connect Last Device</string>
+    <string name="settings_about">About</string>
+    <string name="settings_version">Version</string>
+    <string name="settings_licenses">Licenses</string>
+    <string name="settings_privacy">Privacy Policy</string>
+
+    <!-- Dialog Buttons -->
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_continue">Continue</string>
+    <string name="dialog_close">Close</string>
+
+    <!-- Error Messages -->
+    <string name="error_bluetooth_not_available">Bluetooth is not available on this device</string>
+    <string name="error_bluetooth_not_enabled">Bluetooth is not enabled</string>
+    <string name="error_bluetooth_permission">Bluetooth permission required</string>
+    <string name="error_connection_failed">Failed to connect to device</string>
+    <string name="error_connection_lost">Connection to device was lost</string>
+    <string name="error_device_not_found">Device not found</string>
+    <string name="error_command_failed">Command failed</string>
+    <string name="error_export_failed">Export failed</string>
+    <string name="error_import_failed">Import failed</string>
+    <string name="error_storage_permission">Storage permission required</string>
+
+    <!-- Success Messages -->
+    <string name="success_connected">Connected successfully</string>
+    <string name="success_disconnected">Disconnected successfully</string>
+    <string name="success_export">Export completed successfully</string>
+    <string name="success_import">Import completed successfully</string>
+    <string name="success_cleared">Cleared successfully</string>
+
+    <!-- Permissions -->
+    <string name="permission_bluetooth_title">Bluetooth Permission Required</string>
+    <string name="permission_bluetooth_message">This app needs Bluetooth permission to connect to your OBD device</string>
+    <string name="permission_location_title">Location Permission Required</string>
+    <string name="permission_location_message">Location permission is required for Bluetooth scanning on Android 6.0 and above</string>
+    <string name="permission_storage_title">Storage Permission Required</string>
+    <string name="permission_storage_message">Storage permission is needed to export scan data</string>
+    <string name="permission_settings">Open Settings</string>
+
+    <!-- Misc -->
+    <string name="loading">Loading…</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="no_data">No data</string>
+    <string name="not_available">N/A</string>
+</resources>
