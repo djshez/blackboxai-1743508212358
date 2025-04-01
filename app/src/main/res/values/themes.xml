@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.HT2000OBD" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand colors -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/textOnPrimary</item>
+        
+        <!-- Secondary brand colors -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryDark</item>
+        <item name="colorOnSecondary">@color/textOnSecondary</item>
+        
+        <!-- Status bar color -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/backgroundPrimary</item>
+        <item name="colorSurface">@color/backgroundElevated</item>
+        <item name="colorOnSurface">@color/textPrimary</item>
+        
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
+        
+        <!-- Widget styles -->
+        <item name="materialCardViewStyle">@style/Widget.HT2000OBD.CardView</item>
+        <item name="materialButtonStyle">@style/Widget.HT2000OBD.Button</item>
+        <item name="bottomNavigationStyle">@style/Widget.HT2000OBD.BottomNavigation</item>
+    </style>
+
+    <!-- Card style -->
+    <style name="Widget.HT2000OBD.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardBackgroundColor">@color/backgroundElevated</item>
+        <item name="rippleColor">@color/colorPrimaryLight</item>
+        <item name="cardPreventCornerOverlap">true</item>
+    </style>
+
+    <!-- Button style -->
+    <style name="Widget.HT2000OBD.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/textOnPrimary</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="elevation">2dp</item>
+    </style>
+
+    <!-- Bottom Navigation style -->
+    <style name="Widget.HT2000OBD.BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="elevation">8dp</item>
+        <item name="itemIconTint">@color/bottom_nav_colors</item>
+        <item name="itemTextColor">@color/bottom_nav_colors</item>
+        <item name="itemRippleColor">@color/colorPrimaryLight</item>
+        <item name="backgroundTint">@color/backgroundElevated</item>
+    </style>
+
+    <!-- Text Appearance styles -->
+    <style name="TextAppearance.HT2000OBD.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.HT2000OBD.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.HT2000OBD.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="TextAppearance.HT2000OBD.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textSecondary</item>
+    </style>
+
+    <!-- Chart styles -->
+    <style name="Widget.HT2000OBD.Chart">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+</resources>
