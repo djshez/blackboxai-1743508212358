@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Workspace</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        accent: '#F59E0B',
+                        success: '#10B981',
+                        warning: '#F59E0B',
+                        danger: '#EF4444',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.3s ease-in',
+                        'slide-in': 'slideIn 0.3s ease-out',
+                    },
+                },
+            },
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="h-full flex flex-col bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="favicon.svg" alt="Logo" class="w-8 h-8 mr-2">
+                <h1 class="text-xl font-bold">My Workspace</h1>
+            </div>
+            <button class="bg-primary text-white px-4 py-2 rounded hover:bg-primary/90">
+                <i class="fas fa-plus mr-2"></i>New Project
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <!-- Search and Filter -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+            <div class="flex-grow">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </span>
+                    <input type="text" id="searchProjects" 
+                        class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20" 
+                        placeholder="Search projects...">
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <select id="filterStatus" 
+                    class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20">
+                    <option value="all">All Status</option>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+                    <option value="archived">Archived</option>
+                </select>
+                <select id="sortProjects" 
+                    class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="name">Name</option>
+                    <option value="updated">Last Updated</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Add Project Card -->
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border-2 border-dashed border-gray-300 flex flex-col items-center justify-center cursor-pointer hover:border-primary hover:bg-gray-50 project-card animate-fade-in">
+                <i class="fas fa-plus-circle text-4xl text-gray-400 mb-2"></i>
+                <p class="text-gray-600 font-medium">Add New Project</p>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="mt-12">
+            <h2 class="text-2xl font-bold mb-6">Recent Activity</h2>
+            <div class="bg-white rounded-lg shadow-md p-6 animate-slide-in">
+                <div class="space-y-4" id="activityFeed">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-2xl font-bold">Recent Activity</h2>
+                        <button class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-auto py-4 text-center">
+        <div class="container mx-auto">
+            <p class="text-gray-600">© 2024 My Workspace. All rights reserved.</p>
+            <div class="flex justify-center mt-2 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-gray-600">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-600">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-600">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="fixed bottom-4 right-4 z-50"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Templates -->
+    <template id="projectCardTemplate">
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 project-card animate-fade-in">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center">
+                    <div class="status-indicator mr-2"></div>
+                    <span class="text-sm font-medium text-gray-600"></span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button class="text-gray-400 hover:text-primary transition-colors favorite-btn">
+                        <i class="fas fa-star"></i>
+                    </button>
+                    <div class="relative group">
+                        <button class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block z-10">
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 edit-btn">
+                                <i class="fas fa-edit mr-2"></i>Edit
+                            </a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 archive-btn">
+                                <i class="fas fa-archive mr-2"></i>Archive
+                            </a>
+                            <a href="#" class="block px-4 py-2 text-red-600 hover:bg-gray-100 delete-btn">
+                                <i class="fas fa-trash-alt mr-2"></i>Delete
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center mb-4">
+                <i class="fas fa-folder text-accent text-xl"></i>
+                <h3 class="ml-2 text-lg font-semibold project-name"></h3>
+            </div>
+            <p class="text-gray-600 mb-4 project-description"></p>
+            <div class="flex flex-wrap gap-2 mb-4 project-tags"></div>
+            <div class="flex justify-between items-center border-t pt-4">
+                <div class="flex items-center">
+                    <i class="fas fa-clock text-gray-400 mr-2"></i>
+                    <span class="text-sm text-gray-500 last-updated"></span>
+                </div>
+                <button class="flex items-center text-primary hover:text-primary/80 transition-colors open-btn">
+                    <span>Open Project</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <template id="activityItemTemplate">
+        <div class="flex items-center activity-item hover:bg-gray-50 p-2 rounded-lg">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center activity-icon-container">
+                <i class="activity-icon"></i>
+            </div>
+            <div class="ml-4 flex-grow">
+                <p class="text-gray-800 activity-description"></p>
+                <p class="text-sm text-gray-500 activity-time"></p>
+            </div>
+        </div>
+    </template>
+
+    <!-- Custom Script -->
+    <script src="app.js"></script>
+</body>
+</html>
